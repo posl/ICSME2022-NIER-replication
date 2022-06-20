@@ -12,7 +12,7 @@ import pandas as pd
 import numpy as np
 
 def _get_patched_weight_name(model_name, matrix_id, iter_count):
-  return f'./results/{model_name}/{model_name}_arachne_weights_{matrix_id[0]}to{matrix_id[1]}_iter_{iter_count}.h5'
+  return f'./arachne_results/{model_name}/{model_name}_arachne_weights_{matrix_id[0]}to{matrix_id[1]}_iter_{iter_count}.h5'
 
 
 if __name__=='__main__':

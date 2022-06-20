@@ -27,7 +27,6 @@ if __name__=='__main__':
     ('fmnist_dense5', 'fmnist_flat'),
     ('fmnist_convolutional', 'fmnist_conv'),
     ('fmnist_conv4', 'fmnist_conv'),
-    ('resnet20', 'cifar10')
   ]
 
   for model_name, dataset_name in model_and_dataset:

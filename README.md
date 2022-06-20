@@ -33,7 +33,7 @@ bash arachne_apply.sh
 - It may take long time...
 - model files that are applied arachne is saved under `src/arachne_results`.
 
-## 5. Get the repairs / side-effect dataset
+## 5. Get the repairs / side-effect dataset.
 ```shell
 pwd
 # /XXX/ICSME2022-NIER-replication

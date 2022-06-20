@@ -23,4 +23,4 @@ RUN conda install lightgbm==3.2.1 -y
 RUN conda install shap==0.39.0 -y
 
 WORKDIR /work
-CMD ["jupyter", "lab", "--ip=0.0.0.0", "--allow-root", "--LabApp.token=''"]
+CMD ["jupyter", "lab", "--ip=0.0.0.0", "--allow-root", "--LabApp.token=''", "--port=9999"]

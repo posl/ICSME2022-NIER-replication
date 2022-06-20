@@ -19,6 +19,7 @@ def load_data(name=None) -> Optional[Dataset]:
 
     filepath = os.path.abspath(__file__)
     dirpath = os.path.dirname(filepath)
+    os.makedirs(dirpath + '/saved/', exist_ok=True)
     datapath = dirpath + '/saved/' + name
 
     if os.path.exists(datapath):

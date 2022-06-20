@@ -6,6 +6,7 @@ from libdeeppatcher.types import Dataset
 from libdeeppatcher import prepare
 from IPython.display import clear_output
 from keras import backend as K
+import os
 
 if __name__=='__main__':
   model_and_dataset = [
@@ -47,4 +48,5 @@ if __name__=='__main__':
           save_name = model_name + '_arachne_weights_' + \
                       str(matrix_id[0]) + 'to' + str(matrix_id[1]) + \
                       '_iter_' + str(i)
+          os.makedirs(f'./arachne_results/{model_name}/', exist_ok=True)
           repair_model.save_weights(f'./arachne_results/{model_name}/{save_name}.h5')

@@ -131,4 +131,4 @@ dmypy.json
 .pyre/
 
 saved/
-arachne_results/
+src/arachne_results/

@@ -10,6 +10,7 @@ from IPython.display import clear_output
 from keras import backend as K
 import pandas as pd
 import numpy as np
+import os
 
 def _get_patched_weight_name(model_name, matrix_id, iter_count):
   return f'./arachne_results/{model_name}/{model_name}_arachne_weights_{matrix_id[0]}to{matrix_id[1]}_iter_{iter_count}.h5'
@@ -73,5 +74,7 @@ if __name__=='__main__':
     _df_total = pd.concat(results)
     df_total = _df_total.reset_index(drop=True)
     dropped_cols = ['predicted_cls', 'label', 'label_cls', 'data']
+    os.makedirs(f'./repairability_dataset', exist_ok=True)
+    os.makedirs(f'./side_effect_dataset', exist_ok=True)
     df_total.drop(dropped_cols, axis=1).to_csv(f'./repairability_dataset/{model_name}.csv')
     pos_res.drop(dropped_cols, axis=1).to_csv(f'./side_effect_dataset/{model_name}.csv')
